@@ -1,3 +1,4 @@
+// program to calculte x^n without pow() function.
 #include <iostream>
 using namespace std;
 int main(){
