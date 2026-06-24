@@ -1,0 +1,27 @@
+// Write a program to Compress a string.
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str;
+    cout << "Enter a string: ";
+    cin >> str;
+    string compressed = "";
+    char current = str[0];
+    int count = 1;
+    for (int i = 1; i < str.length(); i++) {
+        if (str[i] == current) {
+            count++;
+        } else {
+            compressed += current;
+            compressed += to_string(count);
+            current = str[i];
+            count = 1;
+        }
+    }
+    compressed += current;
+    compressed += to_string(count);
+    cout << "Compressed string: " << compressed << endl;
+    return 0;
+}
